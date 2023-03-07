@@ -1,5 +1,8 @@
 package com.cryofthecall.game.gfx;
 
+import java.util.Arrays;
+
+
 public class Screen {
 
 	public static final int MAP_WIDTH = 64;
@@ -21,6 +24,10 @@ public class Screen {
 		this.sheet = sheet;
 
 		pixels = new int[width * height];
+	}
+
+	public void clear(int color) {
+		Arrays.fill(pixels, color);
 	}
 
 	public void render(int xPos, int yPos, int tile, int colour, boolean mirrorX, boolean mirrorY) {
